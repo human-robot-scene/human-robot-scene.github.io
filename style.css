@@ -219,12 +219,46 @@ th {
     text-align: left;
 }
 
-#challenge img{
+.challenge-banner{
     border-radius: 10px;
     max-width:90%;
     height:auto;
     margin-top: 20px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.challenge-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.challenge-images img {
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Add responsive behavior for smaller screens */
+@media screen and (max-width: 768px) {
+    .challenge-images {
+        flex-wrap: wrap;
+    }
+    
+    .challenge-images img {
+        max-width: 100%;
+    }
 }
 
 /* Speakers, organizers, etc. */
